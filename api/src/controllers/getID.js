@@ -24,6 +24,9 @@ const getId = async (req, res) => {
           hp: pokemonFromDB.hp,
           attack: pokemonFromDB.attack,
           defense: pokemonFromDB.defense,
+          speed: pokemonFromDB.speed,
+          height: pokemonFromDB.height,
+          weight: pokemonFromDB.weight,
           types: pokemonFromDB.types.map((type)=>type.name).join(` / `)
         };
         
@@ -43,6 +46,9 @@ const getId = async (req, res) => {
       hp: pokemonData.stats.find((stat) => stat.stat.name === "hp").base_stat,
       attack: pokemonData.stats.find((stat) => stat.stat.name === "attack").base_stat,
       defense: pokemonData.stats.find((stat) => stat.stat.name === "defense").base_stat,
+      speed: pokemonData.stats[5].base_stat,
+      height: pokemonData.height,
+      weight: pokemonData.weight,
       types: pokemonData.types.map((type)=>type.type.name).join(` / `)     
     };
 

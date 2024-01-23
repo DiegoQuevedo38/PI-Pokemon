@@ -3,9 +3,9 @@ const { Pokemon, Type } = require('../db');
 
 const createPokemon = async (req, res) => {
   try {
-    const { name, types, hp, attack, defense, image } = req.body;
+    const { id, name, types, hp, attack, defense, image, speed, height, weight } = req.body;
     
-    if (!name || !types || !hp || !attack || !defense || !image) {
+    if (!id || !name || !types || !hp || !attack || !defense || !image || !speed || !height || !weight) {
       return res.status(400).json({ error: 'Por favor, proporciona todos los datos necesarios para crear un Pokémon.' });
     }
 
@@ -18,9 +18,13 @@ const createPokemon = async (req, res) => {
 
     const newPokemon = await Pokemon.create({
       name,
+      id: parseInt(id),
       hp: parseInt(hp),
       attack: parseInt(attack),
       defense: parseInt(defense),
+      speed: parseInt(speed),
+      height: parseInt(height),
+      weight: parseInt(weight),
       image,
     });
 

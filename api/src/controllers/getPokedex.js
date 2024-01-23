@@ -24,6 +24,9 @@ const getPokedex = async (req, res) => {
           hp: pokemonData.data.stats.find((stat) => stat.stat.name === "hp").base_stat,
           attack: pokemonData.data.stats.find((stat) => stat.stat.name === "attack").base_stat,
           defense: pokemonData.data.stats.find((stat) => stat.stat.name === "defense").base_stat,
+          speed: pokemonData.data.stats[5].base_stat,
+          height: pokemonData.height,
+          weight: pokemonData.weight,
           types: pokemonData.data.types.map((type)=>type.type.name).join(` / `)
         };
       })
@@ -45,6 +48,9 @@ const getPokedex = async (req, res) => {
     hp: pokemon.hp,
     attack: pokemon.attack,
     defense: pokemon.defense,
+    speed: pokemon.speed,
+    height: pokemon.height,
+    weight: pokemon.weight,
     types: pokemon.types.map((type)=>type.name).join(` / `)
   }))
 
@@ -53,6 +59,7 @@ const getPokedex = async (req, res) => {
     return res.status(200).json(respuestafinal);
     
 } catch (error) {
+  console.log(error)
   return res.status(500).send(error.message);
 }
 };

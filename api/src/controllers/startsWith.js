@@ -19,6 +19,9 @@ const pokeStartsWith = async () => {
                 hp: pokemonData.data.stats.find((stat) => stat.stat.name === "hp").base_stat,
                 attack: pokemonData.data.stats.find((stat) => stat.stat.name === "attack").base_stat,
                 defense: pokemonData.data.stats.find((stat) => stat.stat.name === "defense").base_stat,
+                speed: pokemonData.data.stats[5].base_stat,
+                height: pokemonData.height,
+                weight: pokemonData.weight,
                 types: pokemonData.data.types.map((type) => type.type.name).join(` / `)
             };
         })
@@ -40,6 +43,9 @@ const pokeStartsWith = async () => {
         hp: pokemon.hp,
         attack: pokemon.attack,
         defense: pokemon.defense,
+        speed: pokemon.speed,
+        height: pokemon.height,
+        weight: pokemon.weight,
         types: pokemon.types.map((type) => type.name).join(` / `)
 
     }))

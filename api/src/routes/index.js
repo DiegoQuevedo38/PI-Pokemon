@@ -12,6 +12,6 @@ router.get("/pokemon", getPokedex)
 router.get("/pokemon/:id", getId)
 router.get("/pokemon/name?=", getByName)
 router.post("/pokemon", createPokemon)
-router.get("/types", getTypes)
+router.get("/type", getTypes)
 
 module.exports = router;
