@@ -1,0 +1,33 @@
+
+.container-landing{
+    background-image: url(pokemon.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 56.7vw;
+    justify-content: center;
+}
+
+.banner{
+    background-image: url(/images/gotta\ catch\ em\ all.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 56.7vw;
+    justify-content: center;
+}
+
+.bienvenida{
+    display: flex;
+    justify-content: center;
+}
+
+.bienvenida h1{
+    width: 200%;
+}
