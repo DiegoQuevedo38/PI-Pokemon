@@ -1,0 +1,13 @@
+.btn-create{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+}
+
+
+.btn-logout{
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+}
+

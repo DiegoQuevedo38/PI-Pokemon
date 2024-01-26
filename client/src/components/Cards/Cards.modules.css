@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+.card-list {
+    width: 70vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 0;
+    background-color: #a2c8d2;
+}
+
+.header-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 25px 0;
+    background-color: #c1d5a9;
+}
+
+.cartas {
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.searchbar {
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    gap: 15px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}

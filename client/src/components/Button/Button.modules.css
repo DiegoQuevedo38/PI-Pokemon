@@ -1,0 +1,34 @@
+.btn-general {
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-family: "Montserrat", sans-serif;
+    padding: 15px 30px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color: #ff3855; 
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  }
+  
+  .btn-general::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../images/Grass.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.6);
+  }
+  
+  .btn-general:hover {
+    background-color: #3d4d50; 
+    color: #ff3855; 
+  }
+  
