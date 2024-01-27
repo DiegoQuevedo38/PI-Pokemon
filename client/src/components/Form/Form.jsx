@@ -23,14 +23,21 @@ const Form = () => {
 
     const [errors, setErrors] = useState({})
 
+    const [errorVisible, setErrorVisible] = useState(false);
+
+
+    const setErrorsAndVisibility = (newErrors) => {
+        setErrors(newErrors);
+        setErrorVisible(Object.values(newErrors).some(error => error !== ''));
+    }
+
 
     const handlechange = (event) => {
-        setInput({
-            ...input,
-            [event.target.name]: event.target.value
-        })
-        setErrors(validations(input))
-    }
+        const { name, value } = event.target;
+        const newInput = { ...input, [name]: value };
+        setInput(newInput);
+        setErrorsAndVisibility(validations(newInput));
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -61,48 +68,41 @@ const Form = () => {
 
     return (
         <div>
+            
             <div className="form-header"></div>
             <form onSubmit={handleSubmit} >
                 <div className="container-all">
-                    <div className="container-inputs">
+                    <div className="input-container">
                         <label htmlFor="name">Nombre: </label>
                         <input className="input-blanks" onChange={handlechange} type="name" name="name" value={input.name} />
-                        {errors.name}
 
                         <br />
                         <label htmlFor="image">Imagen URL: </label>
                         <input className="input-blanks" onChange={handlechange} type="text" name="image" value={input.image} />
-                        {errors.image}
 
                         <br />
-                        <label htmlFor="HealthPoints">Puntos de vida: </label>
+                        <label htmlFor="hp">Puntos de vida: </label>
                         <input className="input-blanks" onChange={handlechange} type="number" name="hp" value={input.hp} />
-                        {errors.hp}
 
                         <br />
                         <label htmlFor="Attack">Ataque: </label>
                         <input className="input-blanks" onChange={handlechange} type="number" name="attack" value={input.attack} />
-                        {errors.attack}
 
                         <br />
                         <label htmlFor="Defense">Defensa: </label>
                         <input className="input-blanks" onChange={handlechange} type="number" name="defense" value={input.defense} />
-                        {errors.defense}
 
                         <br />
                         <label htmlFor="Speed">Velocidad: </label>
                         <input className="input-blanks" onChange={handlechange} type="number" name="speed" value={input.speed} />
-                        {errors.speed}
 
                         <br />
                         <label htmlFor="Height">Altura: </label>
                         <input className="input-blanks" onChange={handlechange} type="number" name="height" value={input.height} />
-                        {errors.height}
 
                         <br />
                         <label htmlFor="weight">Peso: </label>
                         <input className="input-blanks" onChange={handlechange} type="number" name="weight" value={input.weight} />
-                        {errors.weight}
                     </div>
 
                     <div className="container-types">
@@ -132,7 +132,24 @@ const Form = () => {
                     </div>
                 </div>
 
-                <br />
+                <div className={`error-message ${Object.values(errors).some(error => error) ? 'visible' : 'hidden'}`}>
+                    {errors.name} 
+                    <br />
+                    {errors.image} 
+                    <br />
+                    {errors.hp}
+                    <br />
+                    {errors.attack}
+                    <br />
+                    {errors.defense}
+                    <br />
+                    {errors.speed}
+                    <br />
+                    {errors.height}
+                    <br />
+                    {errors.weight}
+                </div>
+
                 <div>
                     <button 
                     className="btn-crear"

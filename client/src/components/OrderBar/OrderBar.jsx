@@ -13,10 +13,10 @@ const Orderbar = ()=>{
         <div>
             <select onChange={handleChange}>
                 <option value="No_Order">Pokédex</option>
-                <option value="Ascendente_Alfa">A-z ↑</option>
-                <option value="Descendente_Alfa">Z-a ↓</option>
-                <option value="Ascendente_Attack">Ataque ↑</option>
-                <option value="Descendente_Attack" >Ataque ↓</option>
+                <option value="Ascendente_Alfa">↑A-z</option>
+                <option value="Descendente_Alfa">↓Z-a</option>
+                <option value="Ascendente_Attack">↑Ataque Ascendente</option>
+                <option value="Descendente_Attack" >↓Ataque Descendente</option>
             </select>
         </div>
     )

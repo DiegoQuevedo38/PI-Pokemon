@@ -3,19 +3,21 @@
     align-items: center;
     justify-content: center;
     padding: 70px 0;
-    background-color: rgb(255 0 0 / 62%);
+    background-color: #f5bbb1c9;
 }
-
-
 
 .img-pokemon {
+    position:absolute;
     width: 30em;
     margin-top: 25px;
-    background-image: url(../../../images/Grass.jpg);
-    border-style: none;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease-in-out;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
 }
-
-
 
 .card-detail {
     display: flex;
@@ -28,61 +30,57 @@
     z-index: 2;
 }
 
-.detail-fondo{
+.detail-fondo {
     display: flex;
     height: 30em;
     justify-content: center;
-    margin:auto;
-    margin-top:auto;
-    align-items:normal;
+    margin: auto;
+    margin-top: auto;
+    align-items: normal;
     padding-top: 0px;
     z-index: 2;
-    background-image: url(../../../images/Grass.jpg);
+    overflow: hidden;
 }
 
-.minicontainer{
+.minicontainer {
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
     margin-top: 15px;
     padding: 0px;
+    color: #4b4a4a;
 }
 
-.minicontainer2{
-    display: flex;
-    margin: 5px;
-    justify-content: center;
-    align-items: center;
-    margin-right: 60px;
-    margin-top: 90px;
-    z-index: 1;    
+.minicontainer2 {
+    position: absolute;
+    right: 0;
 }
 
-.name{
+.name {
     font-family: 'Coda', sans-serif;
     font-size: 4em;
-    color: rgb(250, 250, 250);
+    color: #3b3838; 
     text-shadow: 0 0 15px #09080a;
     padding: 0px;
     z-index: 1;
 }
 
-.type{
+.type {
     display: flex;
-    padding:none;
+    padding: none;
     justify-items: center;
 }
 
-.imagecontainer{
-    justify-content: top;
-    margin-bottom: 6em;
-    margin-left: 6em;
+.imagecontainer {
+    position: absolute;
+    right: 50%;
+    width: 50%;
 }
 
-.characteristics{
+.characteristics {
     color: #34313f;
-    background-color: rgb(237, 131, 131);
+    background-color: #e796f7de; 
     border-radius: 15px;
     height: 8cm;
     width: 6cm;
@@ -93,10 +91,15 @@
     font-family: 'Coda', sans-serif;
     font-weight: bold;
     line-height: 2em;
-    text-shadow: 0.5em 0.5em 1em #ffffff;
     margin-top: 10em;
     margin-bottom: 1em;
-    box-shadow: 25px 10px 6px #665a72;
-    border: solid 5px rgb(75, 74, 74);
+    margin-right: 0;
+    box-shadow: 6vh 5vh 6vh #665a72;
+    border: solid 5px #4b4a4a;
     justify-content: center;
+    transition: background-color 0.5s ease-in-out; 
+
+    &:hover {
+        background-color: #ffcccb;
+    }
 }
