@@ -16,7 +16,7 @@ const validations = (input) => {
         errors.hp = "Su velocidad debe estar entre 1 y 255 puntos" }
     if (isNaN(input.height) || input.height <= 0 || input.height > 145) { 
         errors.hp = "Su altura debe estar entre 1 y 145 decímetros (14.5m)" }
-    if (isNaN(input.weight) || input.weight <= 0 || input.weight > 3980) { 
+    if (isNaN(input.weight) || input.weight < 1 || input.weight > 3980) { 
         errors.hp = "Su peso debe estar entre 1 y 3980 hectogramos (398kg))" }
     if (input.types.length === '') { errors.types = "Debes seleccionar de 1 a 2 tipos" }
 

@@ -8,7 +8,7 @@ const pokeStartsWith = async () => {
 
     const { results } = response.data;
 
-    const allPokemons = await Promise.all( // Busqueda API
+    const allPokemons = await Promise.all(
         results.map(async (pokemon) => {
             const pokemonData = await axios.get(pokemon.url);
 
@@ -27,8 +27,8 @@ const pokeStartsWith = async () => {
         })
     );
 
-    const Pokecreated = await Pokemon.findAll({ // Busqueda BDD
-        include: [ // y le incluye su type
+    const Pokecreated = await Pokemon.findAll({ 
+        include: [
             {
                 model: Type,
                 attributes: ["name"],
@@ -52,7 +52,7 @@ const pokeStartsWith = async () => {
 
     const respuestafinal = [...pokeDBFiltered, ...allPokemons]
 
-    return respuestafinal; // Retornamos al otro controller
+    return respuestafinal; 
 
 
 };

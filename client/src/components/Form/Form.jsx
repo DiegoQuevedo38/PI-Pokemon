@@ -66,42 +66,42 @@ const Form = () => {
                 <div className="container-all">
                     <div className="container-inputs">
                         <label htmlFor="name">Nombre: </label>
-                        <input onChange={handlechange} type="name" name="name" value={input.name} />
+                        <input className="input-blanks" onChange={handlechange} type="name" name="name" value={input.name} />
                         {errors.name}
 
                         <br />
                         <label htmlFor="image">Imagen URL: </label>
-                        <input onChange={handlechange} type="text" name="image" value={input.image} />
+                        <input className="input-blanks" onChange={handlechange} type="text" name="image" value={input.image} />
                         {errors.image}
 
                         <br />
                         <label htmlFor="HealthPoints">Puntos de vida: </label>
-                        <input onChange={handlechange} type="number" name="hp" value={input.hp} />
+                        <input className="input-blanks" onChange={handlechange} type="number" name="hp" value={input.hp} />
                         {errors.hp}
 
                         <br />
                         <label htmlFor="Attack">Ataque: </label>
-                        <input onChange={handlechange} type="number" name="attack" value={input.attack} />
+                        <input className="input-blanks" onChange={handlechange} type="number" name="attack" value={input.attack} />
                         {errors.attack}
 
                         <br />
                         <label htmlFor="Defense">Defensa: </label>
-                        <input onChange={handlechange} type="number" name="defense" value={input.defense} />
+                        <input className="input-blanks" onChange={handlechange} type="number" name="defense" value={input.defense} />
                         {errors.defense}
 
                         <br />
                         <label htmlFor="Speed">Velocidad: </label>
-                        <input onChange={handlechange} type="number" name="speed" value={input.speed} />
+                        <input className="input-blanks" onChange={handlechange} type="number" name="speed" value={input.speed} />
                         {errors.speed}
 
                         <br />
                         <label htmlFor="Height">Altura: </label>
-                        <input onChange={handlechange} type="number" name="height" value={input.height} />
+                        <input className="input-blanks" onChange={handlechange} type="number" name="height" value={input.height} />
                         {errors.height}
 
                         <br />
                         <label htmlFor="weight">Peso: </label>
-                        <input onChange={handlechange} type="number" name="weight" value={input.weight} />
+                        <input className="input-blanks" onChange={handlechange} type="number" name="weight" value={input.weight} />
                         {errors.weight}
                     </div>
 
@@ -115,6 +115,7 @@ const Form = () => {
                                 <div key={type.name} >
                                     <input
                                         type="checkbox"
+                                        className="type-boxes"
                                         name="type"
                                         value={type.name}
                                         checked={input.types.includes(type.name)}
@@ -132,8 +133,9 @@ const Form = () => {
                 </div>
 
                 <br />
-                <div className="btn-form">
+                <div>
                     <button 
+                    className="btn-crear"
                         type="submit"
                         disabled=
                         {input.name === "" || 

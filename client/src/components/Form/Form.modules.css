@@ -11,46 +11,70 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 25px;
+    height: 610px;
+    margin-bottom:0cap;
+    background-image: url(../../../images/Grass.jpg);
 }
 
 .container-types {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1.3em;
-    padding: 25px;
-    width: 451px;
-    height: 378px;
+    justify-content:space-evenly;
+    flex-direction: column-reverse;
+    gap: 10px;
+    padding: 10px;
+    width: 600px;
+    height: 400px;
     border-radius: 20px;
     background-color: #d3f9d8;
-    align-items: center;
+    align-items:center;
     box-shadow: 5px 5px 10px #888888;
+}
+
+.input-blanks{
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    color:rgb(24, 23, 23);
+    text-align: center;
+    transition: transform 0.1s
+}
+
+.input-blanks:hover{
+    transform: scale(0.98);
+    box-shadow: 1px 1px 13px #88888861;
 }
 
 .container-inputs {
     display: grid;
-    padding: 25px;
-    width: 451px;
-    height: 378px;
+    padding: 50px;
+    width: 400px;
+    height: 530px;
     border-radius: 20px;
-    background-color: #d3f9d8;
-    box-shadow: 5px 5px 10px #888888;
+    background-color:color-mix(in srgb-linear, #d3f9d8 80%, #f0b3b2 85%);
+    box-shadow: 5px 5px 50px #83828260;
+    transition: transform 0.6s;
+}
+
+.container-inputs:hover{
+    transform: scale(1.02);
+    box-shadow: 5px 5px 100px #dccecebc;
 }
 
 .types-checks {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5em;
-    justify-content: center;
-    align-items: center;
+    padding: 30px;
+    gap: 1.4em;
+    justify-content:space-evenly;
+    align-items:flex-end;
 }
 
-.types-checks input[type="checkbox"] {
+.type-boxes {
     width: 30px;
     height: 30px;
-    border-radius: 50%;
+    border-radius: 80%;
     margin: 5px;
+    background-image: url(../../../images/Masterball-PNG-Isolated-Image.png);
 }
 
 .container-all {
@@ -60,7 +84,29 @@
 }
 
 .form-header {
-    background-image: url('../../../images/Masterball-PNG-Isolated-Image.png');
+    background-color: #fcbebe;
     background-size: cover;
     background-position: center;
 }
+
+.btn-crear {
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-family: "Montserrat", sans-serif;
+    padding: 15px 30px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color: #ff3855; 
+    color: #fff;
+    position: absolute;
+    bottom: 50px;
+    right: 70px; 
+    overflow: hidden;
+    transition: transform 0.3s, filter 0.3s; 
+}
+
+.btn-crear:hover {
+    transform: scale(1.5);
+    filter: brightness(1.2);
+  }

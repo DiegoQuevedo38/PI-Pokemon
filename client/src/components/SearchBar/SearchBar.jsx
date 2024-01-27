@@ -16,8 +16,8 @@ const Searchbar = () => {
 
     return (
         <div>
-            <input onChange={handlechange} type="search" value={input} placeholder="Search Pokemon" className="form-group"/>
-            <button onClick={() => dispatch(SearchPokemon(input))} className="btn-search" > Search </button>
+            <input onChange={handlechange} type="search" value={input} placeholder="Busca Pokemones" className="form-group"/>
+            <button onClick={() => dispatch(SearchPokemon(input))} className="btn-search" > Buscar </button>
             <button onClick={() => dispatch(getAllPokemons())} className="btn-search"> Reset </button>
 
         </div>

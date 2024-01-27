@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import {Routes, Route, useLocation} from "react-router-dom"
-import Landing from './view/landing/landing';
-import Cards from './components/cards/cards';
+import Landing from './screens/Landing/landing';
+import Detail from './screens/Detail/detail';
+import Cards from './components/Cards/Cards';
 import Form from './components/Form/Form';
-import Detail from './view/detail/detail';
-import Nav from './components/nav/nav';
+import Nav from './components/Nav/Navbar';
 import './App.css';
 
 

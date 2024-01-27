@@ -8,9 +8,9 @@ const router = express.Router();
 
 
 
-router.get("/pokemon", getPokedex)
+router.get("/pokemon/name", getByName)
 router.get("/pokemon/:id", getId)
-router.get("/pokemon/name?=", getByName)
+router.get("/pokemon", getPokedex)
 router.post("/pokemon", createPokemon)
 router.get("/type", getTypes)
 

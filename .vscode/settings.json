@@ -5,7 +5,7 @@
             "server": "localhost",
             "port": 5432,
             "driver": "PostgreSQL",
-            "name": "DB test",
+            "name": "BD test",
             "database": "pokemon",
             "username": "postgres"
         }

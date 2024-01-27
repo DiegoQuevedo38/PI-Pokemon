@@ -1,17 +1,16 @@
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getPokeDetail, CleanDetail } from "../../redux/actions/actions";
+import { getDetail, CleanDetail } from "../../redux/actions/actions";
 import { useEffect } from "react";
 import "./detail.modules.css"
 
 function Detail() {
   const params = useParams()
   const dispatch = useDispatch()
-  const pokeDetail = useSelector(state => state.pokeDetail)
+  const pokeDetail = useSelector(state => state.detail)
 
   useEffect(() => {
-    dispatch(getPokeDetail(params?.id))
-
+    dispatch(getDetail(params?.id))
     return () => dispatch(CleanDetail())
   }, [params?.id])
 
@@ -21,7 +20,7 @@ function Detail() {
       <div className="detail-header"></div>
           <div className="minicontainer">
             <h2 className="name">{pokeDetail?.name} </h2>
-            <p className="type">Type: {pokeDetail?.types} </p>
+            <p className="type">Tipo: {pokeDetail?.types} </p>
           </div>
 
       <div className="detail-fondo">
@@ -34,9 +33,12 @@ function Detail() {
 
             <div className="characteristics">
               <p>Id: {pokeDetail?.id} </p>
-              <p>Health: {pokeDetail?.hp} </p>
-              <p>Attack: {pokeDetail?.attack} </p>
-              <p>Defense: {pokeDetail?.defense} </p>
+              <p>Vida: {pokeDetail?.hp} </p>
+              <p>Ataque: {pokeDetail?.attack} </p>
+              <p>Defensa: {pokeDetail?.defense} </p>
+              <p>Velocidad: {pokeDetail?.speed} </p>
+              <p>Altura: {pokeDetail?.height}dm </p>
+              <p>Peso: {pokeDetail?.Weight}hg </p>
             </div>
           </div>
         </div>

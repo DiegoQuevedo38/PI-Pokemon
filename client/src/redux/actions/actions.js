@@ -17,11 +17,11 @@ export const getAllPokemons = () => {
 
 export const getDetail = (id) => {
     return async (dispatch) => {
-        try{
+        try {
             const {data} = await axios (`${URL}/${id}`)
             return dispatch ({type: GET_DETAIL, payload: data})
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
 }

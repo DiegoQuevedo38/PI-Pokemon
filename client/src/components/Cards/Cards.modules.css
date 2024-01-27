@@ -54,11 +54,10 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    transition: transform 0.3s, filter 0.3s;
+    transition: transform 0.3s, filter 0.3s;  
 }
 
 .card:hover {
-    transform: scale(1.1);
     filter: brightness(1.2);
 }
 

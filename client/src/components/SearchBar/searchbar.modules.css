@@ -13,6 +13,7 @@
     border: none;
     outline: none;
     font-size: 15px;
+    padding-bottom: 15px;
 }
 
 .btn-search{
@@ -25,9 +26,12 @@
     letter-spacing: 2px;
     background-color: #04778fc9;
     color: #fcfafa;
+    transition: transform 0.3s, filter 0.3s;
 }
 
 .btn-search:hover{
     background-color: #fcfafa;
     color: #04788f;
+    transform: scale(0.9);
+    
 }

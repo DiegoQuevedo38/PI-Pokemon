@@ -9,8 +9,10 @@
 
 
 .img-pokemon {
-    width: 25em;
-    margin-top: 120px;
+    width: 30em;
+    margin-top: 25px;
+    background-image: url(../../../images/Grass.jpg);
+    border-style: none;
 }
 
 
@@ -28,13 +30,14 @@
 
 .detail-fondo{
     display: flex;
-    height: 5em;
+    height: 30em;
     justify-content: center;
-    margin: 15px;
-    margin-top: 4em;
-    align-items: center;
+    margin:auto;
+    margin-top:auto;
+    align-items:normal;
     padding-top: 0px;
     z-index: 2;
+    background-image: url(../../../images/Grass.jpg);
 }
 
 .minicontainer{
@@ -50,11 +53,10 @@
     display: flex;
     margin: 5px;
     justify-content: center;
-    /* align-items: center; */
-    /* margin-right: 60px; */
+    align-items: center;
+    margin-right: 60px;
     margin-top: 90px;
-    z-index: 1;
-    
+    z-index: 1;    
 }
 
 .name{
@@ -80,7 +82,7 @@
 
 .characteristics{
     color: #34313f;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgb(237, 131, 131);
     border-radius: 15px;
     height: 8cm;
     width: 6cm;

@@ -1,12 +1,13 @@
-const axios = require("axios");
 const { Pokemon, Type } = require("../db");
+const {pokeStartsWith } = require("./startsWith")
+const axios = require("axios");
 
 const getId = async (req, res) => {
   try {
     const { id } = req.params;
-    
+
     if (id.length > 4) {
-      const pokemonFromDB = await Pokemon.findOne({ // Buscamos el Pokémon en la BDD
+      const pokemonFromDB = await Pokemon.findOne({
           where: { id: id },
           include: [
             {
@@ -35,7 +36,7 @@ const getId = async (req, res) => {
     
   }
 
-    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`); // Buscamos en la API
+    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
 
     const pokemonData = response.data;
 
