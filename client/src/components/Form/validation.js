@@ -2,7 +2,7 @@ const validations = (input) => {
     const errors = {};
 
     if (input.name.length <= 1 || input.name.length >= 15) { 
-        errors.name = "• El nombre debe tener de 1 a 15 carácteres" 
+        errors.name = "• El nombre debe tener de 2 a 15 carácteres" 
     }
     if (!(input.image.startsWith(`http://`) || input.image.startsWith(`https://`))) {
         errors.image = "• La imagen debe ser un URL" }

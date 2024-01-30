@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetail, CleanDetail } from "../../redux/actions/actions";
-import { useEffect } from "react";
+import {useEffect} from "react";
 import "./detail.modules.css"
 
 function Detail() {
@@ -16,35 +16,28 @@ function Detail() {
 
 
   return (
-    <div>
-      <div className="detail-header"></div>
-          <div className="minicontainer">
-            <h2 className="name">{pokeDetail?.name} </h2>
-            <p className="type">Tipo: {pokeDetail?.types} </p>
-          </div>
+  <div className="detail-module">
+    <div className="detail-header"></div>
 
-      <div className="detail-fondo">
-        <div className="card-detail">
-
-          <div className="minicontainer2">
-            <div className="imagecontainer">
-              <img className="img-pokemon" src={pokeDetail?.image} alt={pokeDetail?.name} />
-            </div>
-
-            <div className="characteristics">
-              <p>Id: {pokeDetail?.id} </p>
-              <p>Vida: {pokeDetail?.hp} </p>
-              <p>Ataque: {pokeDetail?.attack} </p>
-              <p>Defensa: {pokeDetail?.defense} </p>
-              <p>Velocidad: {pokeDetail?.speed} </p>
-              <p>Altura: {pokeDetail?.height}dm </p>
-              <p>Peso: {pokeDetail?.Weight}hg </p>
-            </div>
-          </div>
+    <div className="pokemon-detail-container">
+        <div className="characteristics">
+            <p>HP: {pokeDetail?.hp} </p>
+            <p>Attack: {pokeDetail?.attack} </p>
+            <p>Defense: {pokeDetail?.defense} </p>
+            <p>Speed: {pokeDetail?.speed} </p>
+            <p>Height: {pokeDetail?.height} dm </p>
+            <p>Weight: {pokeDetail?.weight} hg </p>
         </div>
+
+      <div className="containerName">
+        <img className="img-pokemon" src={pokeDetail?.image} alt={pokeDetail?.name} />
+        <h2 className="name">{pokeDetail?.name} </h2>
+        <p className="type">Type: {pokeDetail?.types} </p>
       </div>
     </div>
+</div>
   );
 }
 
 export default Detail;
+

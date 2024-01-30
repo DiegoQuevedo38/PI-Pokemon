@@ -1,6 +1,7 @@
 import { GET_POKEDEX, GET_DETAIL, CLEAN_DETAIL, SEARCH_POKEMON, 
         ORDER_POKEMON, FILTER_POKEMON, FILTER_TYPE_POKEMON, GET_TYPES } from ".";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const URL = "http://localhost:3001/pokemon"
 
@@ -49,7 +50,7 @@ export const SearchPokemon = (name) => {
             const {data} = await axios.get(`${URL}/name?name=${name}`)
             return dispatch ({type: SEARCH_POKEMON, payload: data})
         } catch (error) {
-            window.alert("Pokemon no encontrado")
+            toast.warn("Oh, oh! Pokemon no encontrado")
         }
     }
 }

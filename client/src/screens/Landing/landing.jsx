@@ -9,14 +9,13 @@ const Landing = () => {
                 <h1>
                     ¡Bienvenido a mi app de Pokémon!
                 </h1>
-                <Button
-                    class="home-btn"
+                <br/>
+            </div>
+            <Button
+                    className="home-btn"
                     path={"/home"}
                     text="Home"
                 />
-                <button class="sound-btn">🔊</button>
-            </div>
-
         </div>
     )
 }

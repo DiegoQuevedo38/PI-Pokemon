@@ -1,5 +1,4 @@
 const { Pokemon, Type } = require("../db");
-const {pokeStartsWith } = require("./startsWith")
 const axios = require("axios");
 
 const getId = async (req, res) => {

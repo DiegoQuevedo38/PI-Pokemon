@@ -5,10 +5,16 @@ import { useEffect, useState } from "react"
 import validations from "./validation"
 import "./form.modules.css"
 
+import React from 'react';
+  import { ToastContainer, toast } from 'react-toastify';
+
+  import 'react-toastify/dist/ReactToastify.css';
+
 const Form = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
+    
     const [input, setInput] = useState({
         name: "",
         image: "",
@@ -20,24 +26,26 @@ const Form = () => {
         weight: "",
         types: []
     })
-
+    
     const [errors, setErrors] = useState({})
-
+    
     const [errorVisible, setErrorVisible] = useState(false);
-
-
+    
+    
     const setErrorsAndVisibility = (newErrors) => {
         setErrors(newErrors);
         setErrorVisible(Object.values(newErrors).some(error => error !== ''));
     }
-
-
+    
+    
     const handlechange = (event) => {
         const { name, value } = event.target;
         const newInput = { ...input, [name]: value };
         setInput(newInput);
         setErrorsAndVisibility(validations(newInput));
     };
+
+    const notify = () => toast("Oh oh! Revisa los datos de tu Pokémon");
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -67,8 +75,7 @@ const Form = () => {
     };
 
     return (
-        <div>
-            
+        <div>         
             <div className="form-header"></div>
             <form onSubmit={handleSubmit} >
                 <div className="container-all">
@@ -173,7 +180,6 @@ const Form = () => {
                         errors.height ||
                         errors.weight}
                     >¡Crear!</button>
-
                 </div>
             </form>
         </div>

@@ -10,7 +10,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('../../../images/Woods-GIF.gif');
+    background-image: url(../../../images/Woods-Boomerang.gif);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -22,14 +22,11 @@ body {
     align-items: center;
     justify-content: center;
     padding: 70px 0;
-    background-color: var(--background-color);
-    opacity: 0.2;
+    background-color: #ffffff22;
+    border-width: 5px;
     transition: opacity 0.3s ease;
 }
 
-.form-header:hover {
-    opacity: 0.8;
-}
 
 .container-all {
     display: flex;
@@ -51,7 +48,14 @@ body {
     border-radius: 5vh;
     background-color: var(--container-color);
     align-items: center;
-    box-shadow: 5px 5px 10px var(--box-shadow-color);
+    box-shadow: 5px 5px 10px #767171c1;
+    border-style:ridge;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container-types:hover{
+    transform: scale(1.02);
+    box-shadow: 5px 5px 100px var(--hover-box-shadow-color);
 }
 
 .input-blanks {
@@ -75,15 +79,15 @@ body {
     width: 400px;
     height: 550px;
     background-color: var(--input-color);
-    box-shadow: 5px 5px 50px var(--box-shadow-color);
+    box-shadow: 5px 5px 10px #767171c1;
     border-radius: 20px;
     transition: transform 0.6s;
+    border-style:outset;
 }
 
 .input-container:hover{
     transform: scale(1.02);
     box-shadow: 5px 5px 100px var(--hover-box-shadow-color);
-
 }
 
 
@@ -98,6 +102,7 @@ body {
     align-items:flex-end;
 }
 
+
 .type-boxes {
     appearance: none;
     width: 30px;
@@ -109,6 +114,10 @@ body {
     background-position: center;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+}
+
+.type-boxes:hover{
+    transform: scale(1.1)
 }
 
 .type-boxes:checked {
@@ -128,7 +137,7 @@ body {
     color: #fff;
     position: absolute;
     bottom: 50px;
-    right: 70px;
+    right: 50vh;
     overflow: hidden;
     transition: transform 0.3s, filter 0.3s;
 }
@@ -138,6 +147,13 @@ body {
     filter: brightness(1.2);
 }
 
+.btn-crear:disabled{
+    color:#fff;
+    background-color: #88888884;
+    transform: scale(0.8);
+    filter: brightness(0.8)
+}
+
   
 .input-container.error {
     border: 1vh solid #ff0000;
@@ -145,7 +161,7 @@ body {
 }
 
 .error-message:hover{
-    opacity:0.3;
+    opacity:0;
 }
 
   .error-message {

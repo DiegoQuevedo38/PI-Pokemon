@@ -1,14 +1,24 @@
+@font-face {
+  font-family: 'jeje';
+  src: url(../../../images/Fonts/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .pagination-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 10vh;
+  margin-right: 10vh;
 }
 
 .btn-pagination, .btn-pagination:disabled {
   border: none;
   outline: none;
   border-radius: 25px;
-  font-family: inherit;
+  font-family: "jeje";
+  font-size: 3vh;
   padding: 15px 30px;
   cursor: pointer;
   letter-spacing: 2px;

@@ -1,6 +1,6 @@
 const { Pokemon, Type } = require ("../db")
 const axios = require("axios");
-const URL = "http://pokeapi.co/api/v2/pokemon?limit=60";
+const URL = "http://pokeapi.co/api/v2/pokemon?limit=120";
 
 const getPokedex = async (req, res) => {
   
@@ -13,7 +13,7 @@ const getPokedex = async (req, res) => {
 
     const { results } = response.data;
     
-    const allPokemons = await Promise.all( // Busqueda de la API
+    const allPokemons = await Promise.all( 
       results.map(async (pokemon) => {
         const pokemonData = await axios.get(pokemon.url);
 
@@ -32,8 +32,8 @@ const getPokedex = async (req, res) => {
       })
     );
     
-    const Pokecreated = await Pokemon.findAll({ // Busqueda de la BDD
-      include: [ // y le incluye su type
+    const Pokecreated = await Pokemon.findAll({
+      include: [
           {
               model: Type,
               attributes: ["name"],
@@ -41,7 +41,7 @@ const getPokedex = async (req, res) => {
           }]
   } );
   
-  const pokeDBFiltered = Pokecreated.map((pokemon)=>({// Mapeo de la info de la BDD
+  const pokeDBFiltered = Pokecreated.map((pokemon)=>({
     id: pokemon.id,
     name: pokemon.name,
     image: pokemon.image,

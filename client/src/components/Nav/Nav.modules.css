@@ -18,11 +18,3 @@
     transform: scale(1.15);
 }
 
-.navbar {
-    background-color: rgba(255, 255, 255, 0.9);
-    transition: background-color 0.3s ease;
-}
-
-.navbar.scrolling{
-    background-color: rgba(15, 15, 15, 0.3);
-}

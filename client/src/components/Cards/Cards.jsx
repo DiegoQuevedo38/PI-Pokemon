@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { getAllPokemons } from "../../redux/actions/actions";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Pagination from "../Page/Pagination";
 import Orderbar from "../OrderBar/OrderBar";
 import FilterBar from "../Filters/Filter";
@@ -33,21 +33,37 @@ const Cards = ({ currentPage, setCurrentPage }) => {
     setCurrentPage(pageNumber)
   }
 
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+        const handleScroll = () => {
+          const scrollTop = window.scrollY;
+          setScrolling(scrollTop > 90); 
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+
   return (
-    <div>
+  <div>
+    <nav className={`navbar ${scrolling ? 'scrolling' : ''}`}>
       <div className="header">
         <Searchbar></Searchbar>
       </div>
       <header className="header-filter">
-        <p>Origen: </p>
+        <p>Origin:</p>
         <FilterBar></FilterBar>
-        <p>Tipo: </p>
+        <p>Type:</p>
         <FilterBarType></FilterBarType>
-        <p>Orden: </p>
+        <p>Order:</p>
         <Orderbar></Orderbar>
       </header>
-
-      <div>
+      <br/>
+      <div className="pages">
         {pokedex.length > 0 
         ? <Pagination
           currentPage={currentPage}
@@ -55,7 +71,7 @@ const Cards = ({ currentPage, setCurrentPage }) => {
           onPageChange={paginate}
           /> : null}
       </div>
-
+      <div className={`blur-Scroll ${scrolling ? 'scrolling' : ''}`}>
       <div className="cartas">
         <main className="card-list">
           {currentPokes?.map((pokemon) => (
@@ -69,6 +85,8 @@ const Cards = ({ currentPage, setCurrentPage }) => {
         </main>
       </div>
     </div>
+    </nav>
+  </div>
   );
 };
 

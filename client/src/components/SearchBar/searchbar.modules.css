@@ -36,12 +36,3 @@
     color: #04788f;
     transform: scale(0.9);
 }
-
-.navbar {
-    background-color:#04778fc9;
-    transition: background-color 0.3s ease;
-}
-
-.navbar.scrolling{
-    background-color: #04788f1b;
-}

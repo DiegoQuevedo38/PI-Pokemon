@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux"
 import { OrderPokemon } from "../../redux/actions/actions"
+import "./OrderBar.modules.css"
 
 const Orderbar = ()=>{
     const dispatch = useDispatch()
@@ -15,8 +16,8 @@ const Orderbar = ()=>{
                 <option value="No_Order">Pokédex</option>
                 <option value="Ascendente_Alfa">↑A-z</option>
                 <option value="Descendente_Alfa">↓Z-a</option>
-                <option value="Ascendente_Attack">↑Ataque Ascendente</option>
-                <option value="Descendente_Attack" >↓Ataque Descendente</option>
+                <option value="Ascendente_Attack">↑Attack</option>
+                <option value="Descendente_Attack" >↓Attack</option>
             </select>
         </div>
     )

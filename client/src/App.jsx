@@ -14,7 +14,8 @@ function App() {
   
   return (   
       <div>
-        {location.pathname !== "/" ? <Nav /> : ""}    
+        {location.pathname !== "/" ? <Nav /> : ""}
+    
        <Routes>
           <Route path="/home" element={<Cards currentPage={currentPage} setCurrentPage={setCurrentPage}/>} />
           <Route path= "/detail/:id" element= {<Detail />} />

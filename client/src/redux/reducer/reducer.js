@@ -69,10 +69,10 @@ const reducer = (state = initialState, action) => {
             if (action.payload === "AllPokemons") {
                 filteredPokemons = backUpFilter
             }
-            else if (action.payload === "PokemonfromAPI"){
+            else if (action.payload === "OriginalPokemon"){
                 filteredPokemons = backUpFilter.filter((pokemon) => !isNaN(pokemon.id))
             }
-            else if (action.payload === "PokemonfromBDD"){
+            else if (action.payload === "CreatedPokemon"){
                 filteredPokemons = backUpFilter.filter((pokemon) => isNaN(pokemon.id))
             }
             return {

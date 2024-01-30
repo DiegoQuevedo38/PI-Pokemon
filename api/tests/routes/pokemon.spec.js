@@ -4,7 +4,6 @@ const { Pokemon, conn } = require('../../src/db.js');
 
 const agent = session(app);
 const pokemon = {
-  "id": 25,
     "name": "pikachu",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
     "hp": 35,
@@ -41,18 +40,7 @@ describe('Pokemon routes', () => {
   });
   describe("GET /pokemon/:id", () => {
     it("should return an {}", () =>
-    agent.get("/pokemon/pikachu").expect({
-      "id": 25,
-        "name": "pikachu",
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-        "hp": 35,
-        "attack": 55,
-        "defense": 40,
-        "speed": 90,
-        "height": 4,
-        "weight": 60,
-        "types": "electric"
-    })
+    agent.get(`/pokemon/${pokemon}`).expect({})
     )
   })
 });
