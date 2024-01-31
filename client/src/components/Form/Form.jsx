@@ -116,7 +116,7 @@ return (
                         showErrorToast("image")}}
                     onBlur={handleBlur} type="text" name="image" value={input.image} />
                     
-                    <label htmlFor="hp">HP points: </label>
+                    <label htmlFor="hp">❤️ Health Points</label>
                     <input className={`input-blanks ${focusedInput === "hp" ? "focused" : ""}`}
                     onChange={handlechange}
                     onFocus={() => {
@@ -124,7 +124,7 @@ return (
                         showErrorToast("hp")}}
                     onBlur={handleBlur} type="number" name="hp" value={input.hp} />
                         
-                    <label htmlFor="Attack">Attack: </label>
+                    <label htmlFor="Attack">🗡️ Attack</label>
                     <input className={`input-blanks ${focusedInput === "attack" ? "focused" : ""}`}
                     onChange={handlechange}
                     onFocus={() => {
@@ -132,7 +132,7 @@ return (
                         showErrorToast("attack")}}
                     onBlur={handleBlur} type="number" name="attack" value={input.attack} />
 
-                    <label htmlFor="Defense">Defense: </label>
+                    <label htmlFor="Defense">🛡️ Defense</label>
                     <input className={`input-blanks ${focusedInput === "defense" ? "focused" : ""}`}
                     onChange={handlechange}
                     onFocus={() => {
@@ -140,7 +140,7 @@ return (
                         showErrorToast("defense")}}
                     onBlur={handleBlur} type="number" name="defense" value={input.defense} />
 
-                    <label htmlFor="Speed">Speed: </label>
+                    <label htmlFor="Speed">🌀 Speed </label>
                     <input className={`input-blanks ${focusedInput === "speed" ? "focused" : ""}`}
                     onChange={handlechange}
                     onFocus={() => {
@@ -148,7 +148,7 @@ return (
                         showErrorToast("speed")}}
                     onBlur={handleBlur} type="number" name="speed" value={input.speed} />
 
-                    <label htmlFor="Height">Height: </label>
+                    <label htmlFor="Height">📏 Height</label>
                     <input className={`input-blanks ${focusedInput === "height" ? "focused" : ""}`}
                     onChange={handlechange}
                     onFocus={() => {
@@ -156,7 +156,7 @@ return (
                         showErrorToast("height")}}
                     onBlur={handleBlur} type="number" name="height" value={input.height} />
 
-                    <label htmlFor="weight">Weight: </label>
+                    <label htmlFor="weight">⚓ Weight</label>
                     <input className={`input-blanks ${focusedInput === "weight" ? "focused" : ""}`}
                     onChange={handlechange}
                     onFocus={() => {

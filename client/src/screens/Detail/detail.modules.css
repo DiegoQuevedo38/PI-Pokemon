@@ -33,13 +33,16 @@
     overflow: hidden;
 }
 
+
 .characteristics {
     position: relative;
     color: #413737;
-    background-color: #e2d697f6; 
     border-radius: 15px;
     padding-top: 4vh;
     padding-bottom: 6vh;
+    background-image: url(../../../images/Fondo-Form.jpg);
+    background-position-x: 5vw;
+    background-position-y: center;
     height: 100%;
     width: 100%;
     max-width: 100vh;
@@ -56,6 +59,7 @@
     border: solid 5px #42383871;
     justify-content: center;
     font-family: 'jeje';
+    overflow: hidden;
 }
 
 .containerName {

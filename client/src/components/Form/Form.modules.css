@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'jeje';
-    src: url(../../../images/Fonts/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf) format('truetype');
+    src: url(../../../images/Fonts/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf) format('opentype');
     font-weight: normal;
     font-style: normal;
   }
@@ -11,7 +11,7 @@
     --input-color: #e4d89bfb;
     --box-shadow-color: #888888;
     --hover-box-shadow-color: #dccecebc;
-    --button-color: #ff3855;
+    --button-color: #e1b569;
 }
 
 body {
@@ -45,6 +45,8 @@ body {
 
 .input-blanks {
     border-radius: 8px;
+    font-family: "jeje";
+    font-size: 2vh;
     display: flex;
     justify-content: flex-start;
     margin-bottom: 2vh;
@@ -64,13 +66,15 @@ body {
     display: grid;
     position: relative;
     padding: 6vh;
-    padding-bottom: 8vh;
+    padding-bottom: 10vh;
     width: 100%;
     max-width: 34vh;
     height: 100%;
     max-height: 56vh;
     margin-top: 5vh;
-    background-image: url(../../../images/Form.png);
+    background-image: url(../../../images/Fondo-Form.jpg);
+    background-position-x: -18.3vw;
+    background-position-y: 36vh;
     background-color: var(--input-color);
     box-shadow: 5px 5px 10px #767171c1;
     border-radius: 20px;
@@ -97,8 +101,9 @@ body {
     height: 100%;
     max-height: 54vh;
     border-radius: 5vh;
-    background-image: url(../../../images/Form.png);
-
+    background-image: url(../../../images/Fondo-Form.jpg);
+    background-position-x: -18.8vw;
+    background-position-y: -8vh;
     align-items: center;
     box-shadow: 5px 5px 10px #767171c1;
     border-style:ridge;
@@ -160,12 +165,14 @@ body {
     right: 60vh;
     overflow: hidden;
     transition: transform 0.3s, filter 0.3s;
+
+    &:hover{
+        transform: scale(1.5);
+    filter: brightness(1.2);
+    text-shadow: 0.2vh 0.2vh 0.8vh #1b1a1a;
+    }
 }
 
-.btn-crear:hover {
-    transform: scale(1.5);
-    filter: brightness(1.2);
-}
 
 .btn-crear:disabled{
     color:#fff;

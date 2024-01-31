@@ -7,7 +7,7 @@ const Landing = () => {
         <div className="container-landing">
             <div className="land">
                 <h1>
-                    ¡Bienvenido a mi app de Pokémon!
+                    Wellcome back trainer!
                 </h1>
                 <br/>
             </div>

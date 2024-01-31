@@ -28,26 +28,26 @@ function Detail() {
         <div className="characteristics">
 
           <p className="stat-text">HP ❤️</p>
-              <p className="stat-value">{pokeDetail?.hp} / 255</p>
+              <p className="stat-value">{pokeDetail?.hp} / 225</p>
           <div className="stat-Container">
             <div className="stat-background">
-            <div className="stat-bar" data-stat="hp" style={{ width: calculateBarWidth(pokeDetail?.hp, 1, 255), }}></div>
+            <div className="stat-bar" data-stat="hp" style={{ width: calculateBarWidth(pokeDetail?.hp, 1, 225), }}></div>
             </div>
           </div>
 
           <p className="stat-text">Attack 🗡️</p>
-            <p className="stat-value">{pokeDetail?.attack} / 150</p>
+            <p className="stat-value">{pokeDetail?.attack} / 105</p>
           <div className="stat-Container">
             <div className="stat-background">
-            <div className="stat-bar" data-stat="atk" style={{ width: calculateBarWidth(pokeDetail?.attack, 5, 150), }}></div>
+            <div className="stat-bar" data-stat="atk" style={{ width: calculateBarWidth(pokeDetail?.attack, 5, 105), }}></div>
             </div>
           </div>
 
           <p className="stat-text">Defense 🛡️</p>
-            <p className="stat-value">{pokeDetail?.defense} / 230</p>
+            <p className="stat-value">{pokeDetail?.defense} / 205</p>
           <div className="stat-Container">
             <div className="stat-background">
-            <div className="stat-bar" data-stat="def" style={{ width: calculateBarWidth(pokeDetail?.defense, 5, 230), }}></div>
+            <div className="stat-bar" data-stat="def" style={{ width: calculateBarWidth(pokeDetail?.defense, 5, 205), }}></div>
             </div>
           </div>
 
