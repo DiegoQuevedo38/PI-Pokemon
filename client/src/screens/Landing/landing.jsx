@@ -5,7 +5,7 @@ import "./landing.modules.css"
 const Landing = () => {
     return (
         <div className="container-landing">
-            <div className="bienvenida">
+            <div className="land">
                 <h1>
                     ¡Bienvenido a mi app de Pokémon!
                 </h1>

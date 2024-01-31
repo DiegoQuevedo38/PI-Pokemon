@@ -6,13 +6,6 @@
     font-style: normal;
   }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    color:rgb(27, 26, 23);
-}
-
 .card-list {
     width: 60vw;
     margin: 0 auto;
@@ -36,7 +29,7 @@
     align-items: center;
     justify-content: center;
     padding: 35px 0;
-    background-color: #a2c8d2;
+    background-color: #d1d2a2;
 }
 
 .header-filter {
@@ -44,7 +37,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 25px 0;
-    background-color: #c1d5a9;
+    background-color: #eedcbb;
     font-family: "jeje";
     font-size: medium;
 }

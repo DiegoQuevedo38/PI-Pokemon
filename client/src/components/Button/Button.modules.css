@@ -1,13 +1,22 @@
+@font-face {
+  font-family: 'jeje';
+  src: url(../../../images/Fonts/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .btn-general {
     border: none;
     outline: none;
     border-radius: 25px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "jeje";
+    font-size: 2vh;
     padding: 15px 30px;
+    margin-top: -2vh;
     cursor: pointer;
     letter-spacing: 2px;
     background-color: rgb(255, 232, 101); 
-    color: #221e1e;
+    color:#514e4e;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease-in-out, 0.3s ease-out, color 0.3s ease-out;
@@ -29,7 +38,7 @@
   
   .btn-general:hover {
     background-color: #3d4d50; 
-    color: #392f30; 
+    color: #353333 ; 
     transform: scale(1.15);
   }
   

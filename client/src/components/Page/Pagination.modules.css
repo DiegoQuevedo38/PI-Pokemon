@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'jeje';
+  font-family: "jeje";
   src: url(../../../images/Fonts/MADE\ TOMMY\ Medium_PERSONAL\ USE.otf) format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -16,13 +16,13 @@
 .btn-pagination, .btn-pagination:disabled {
   border: none;
   outline: none;
-  border-radius: 25px;
+  border-radius: 30px;
   font-family: "jeje";
-  font-size: 3vh;
-  padding: 15px 30px;
+  font-size: 6vh;
+  padding: 0px 23px 4px;
   cursor: pointer;
-  letter-spacing: 2px;
-  background-color: #04788f;
+  letter-spacing: 0px;
+  background-color: #c4a951;
   color: #fcfafa;
 }
 

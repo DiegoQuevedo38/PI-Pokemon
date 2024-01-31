@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'SweetieBubbleGum';
-  src: url(../../../images/Fonts/SweetieBubbleGum-Regular.ttf) format('truetype');
+  font-family: 'puchaina';
+  src: url(../../../images/Fonts/Slowdex.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 .container-landing {
-    background-image: url(../../../images/Intro-GIF.gif);
+    background-image: url(../../../images/Ending-Girl-GIF.gif);
     background-size: cover;
     background-position: top;
     width: 100%;
@@ -20,16 +20,49 @@
   }
 
   .bienvenida {
-    margin-top: 60vh;
+    margin-top: 0vh;
     margin-bottom: 4vh;
     display: flex;
     justify-content:space-around;
   }
   
-  .bienvenida h1 {
+  .land h1 {
     width: 200%;
     font-size: 8vh;
-    font-family: 'SweetieBubbleGum';
-    color: antiquewhite;
+    font-family: 'puchaina';
+    color: rgb(61, 52, 40);
   }
   
+
+  .land {
+    margin-top: 0vh;
+    margin-bottom: 4vh;
+    display: flex;
+    justify-content:space-around;
+    animation: float 4s infinite;
+    -webkit-animation: float 4s infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+      -webkit-transform: translateY(-20px);
+      -moz-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+      -o-transform: translateY(-20px);
+    }
+    0% {
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+    }
+  }

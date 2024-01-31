@@ -14,6 +14,11 @@ function Detail() {
     return () => dispatch(CleanDetail())
   }, [params?.id])
 
+  const calculateBarWidth = (value, min, max) => {
+    const clampedValue = Math.min(Math.max(value, min), max); 
+    const percentage = ((clampedValue - min) / (max - min)) * 100; 
+    return `${percentage}%`;
+  };
 
   return (
   <div className="detail-module">
@@ -21,12 +26,51 @@ function Detail() {
 
     <div className="pokemon-detail-container">
         <div className="characteristics">
-            <p>HP: {pokeDetail?.hp} </p>
-            <p>Attack: {pokeDetail?.attack} </p>
-            <p>Defense: {pokeDetail?.defense} </p>
-            <p>Speed: {pokeDetail?.speed} </p>
-            <p>Height: {pokeDetail?.height} dm </p>
-            <p>Weight: {pokeDetail?.weight} hg </p>
+
+          <p className="stat-text">HP ❤️</p>
+              <p className="stat-value">{pokeDetail?.hp} / 255</p>
+          <div className="stat-Container">
+            <div className="stat-background">
+            <div className="stat-bar" data-stat="hp" style={{ width: calculateBarWidth(pokeDetail?.hp, 1, 255), }}></div>
+            </div>
+          </div>
+
+          <p className="stat-text">Attack 🗡️</p>
+            <p className="stat-value">{pokeDetail?.attack} / 150</p>
+          <div className="stat-Container">
+            <div className="stat-background">
+            <div className="stat-bar" data-stat="atk" style={{ width: calculateBarWidth(pokeDetail?.attack, 5, 150), }}></div>
+            </div>
+          </div>
+
+          <p className="stat-text">Defense 🛡️</p>
+            <p className="stat-value">{pokeDetail?.defense} / 230</p>
+          <div className="stat-Container">
+            <div className="stat-background">
+            <div className="stat-bar" data-stat="def" style={{ width: calculateBarWidth(pokeDetail?.defense, 5, 230), }}></div>
+            </div>
+          </div>
+
+          <p className="stat-text">Speed 🌀 </p>
+            <p className="stat-value">{pokeDetail?.speed} / 150</p>
+          <div className="stat-Container">
+            <div className="stat-background">
+            <div className="stat-bar" data-stat="speed" style={{ width: calculateBarWidth(pokeDetail?.speed, 5, 150), }}></div>
+            </div>
+          </div>
+
+          <div className="h-w-Container">
+            <div className="height-data">
+              <p className="data-img">📏</p>
+              <p className="text">Height</p>
+              <p className="data">{pokeDetail?.height}</p>
+            </div>
+            <div className="weight-data">
+              <p className="data-img">⚓</p>
+              <p className="text">Weight</p>
+              <p className="data">{pokeDetail?.weight} </p>
+            </div>
+          </div>
         </div>
 
       <div className="containerName">

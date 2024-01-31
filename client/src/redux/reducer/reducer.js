@@ -54,7 +54,7 @@ const reducer = (state = initialState, action) => {
                     return (b.attack - a.attack)
                 })
             }
-            if (action.payload === "No_order") {
+            if (action.payload === "No_Order") {
                 orderedPokemons = [...state.pokedexCopy]
             }
             return {
@@ -66,13 +66,13 @@ const reducer = (state = initialState, action) => {
             let backUpFilter = [...state.pokedexCopy]
             let filteredPokemons = []
 
-            if (action.payload === "AllPokemons") {
+            if (action.payload === "All_Pokemons") {
                 filteredPokemons = backUpFilter
             }
-            else if (action.payload === "OriginalPokemon"){
+            else if (action.payload === "From_API"){
                 filteredPokemons = backUpFilter.filter((pokemon) => !isNaN(pokemon.id))
             }
-            else if (action.payload === "CreatedPokemon"){
+            else if (action.payload === "From_DB"){
                 filteredPokemons = backUpFilter.filter((pokemon) => isNaN(pokemon.id))
             }
             return {

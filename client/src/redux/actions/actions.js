@@ -50,7 +50,7 @@ export const SearchPokemon = (name) => {
             const {data} = await axios.get(`${URL}/name?name=${name}`)
             return dispatch ({type: SEARCH_POKEMON, payload: data})
         } catch (error) {
-            toast.warn("Oh, oh! Pokemon no encontrado")
+            window.alert("Oh, oh! Pokemon no encontrado")
         }
     }
 }
