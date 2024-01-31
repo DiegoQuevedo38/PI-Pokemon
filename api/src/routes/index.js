@@ -1,8 +1,8 @@
-const { createPokemon } = require("../controllers/postPokemon");
-const { getPokedex } = require("../controllers/getPokedex");
+const { createPokemon } = require("../controllers/PostPokemon");
+const { getPokedex } = require("../controllers/getPokemons");
 const { getByName } = require("../controllers/getByName");
 const { getTypes } = require("../controllers/getTypes");
-const { getId } = require("../controllers/getID");
+const { getId } = require("../controllers/getByID");
 const express = require("express");
 const router = express.Router();
 

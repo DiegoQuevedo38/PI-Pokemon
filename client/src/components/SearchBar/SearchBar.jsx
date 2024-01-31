@@ -1,5 +1,5 @@
 import { SearchPokemon, getAllPokemons } from "../../redux/actions/actions"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 import "./searchbar.modules.css"
 
@@ -12,6 +12,18 @@ const Searchbar = () => {
     const handleChange = (event) => {
         setInput(event.target.value)
     }
+
+    useEffect(() => {
+        const realTimeSearch = setTimeout(() => {
+            if(input !== "") {
+                dispatch(SearchPokemon(input))
+            } else {
+                dispatch(getAllPokemons())
+            }
+        }, 10);
+
+        return () => clearTimeout(realTimeSearch);
+    }, [input, dispatch])
 
     return (
         <div>

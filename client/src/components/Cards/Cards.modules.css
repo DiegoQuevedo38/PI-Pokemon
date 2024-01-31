@@ -6,6 +6,12 @@
     font-style: normal;
   }
 
+.cartas {
+    margin-top: 8vh;
+    height: 100%;
+    min-height: 56vh;
+}
+
 .card-list {
     width: 60vw;
     margin: 0 auto;
@@ -22,6 +28,7 @@
 .pages{
     font-family:"jeje";
     font-size: 3vh;
+    margin-top: 3vh;
 }
 
 .header {
