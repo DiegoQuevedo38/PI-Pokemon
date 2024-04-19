@@ -80,7 +80,6 @@ const reducer = (state = initialState, action) => {
                 pokedex: filteredPokemons
             }
         case FILTER_TYPE_POKEMON:
-            
             if(action.payload === "All"){
                 return {
                     ...state,
